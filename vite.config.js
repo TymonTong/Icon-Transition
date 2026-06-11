@@ -27,6 +27,7 @@ const WS = `ws://127.0.0.1:${BACKEND_PORT}`;
 //     re-enable here using the same ``server.hmr.path`` shape AWS S3
 //     presigned URLs / Vercel preview deployments use.
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === "true" ? "/Icon-Transition/" : "/",
   plugins: [vue()],
   server: {
     host: "0.0.0.0",
